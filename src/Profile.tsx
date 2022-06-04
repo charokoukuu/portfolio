@@ -1,5 +1,13 @@
 import { Box, Grid } from "@mui/material"
+import { useState } from "react";
 import { PieChart } from 'react-minimal-pie-chart';
+import { DetailDialog } from "./component/DetailDialog";
+import { Header } from "./component/Header";
+export interface WorkContentDialogProps {
+    title: string;
+    content: string;
+    image: string;
+}
 export const Profile = () => {
     const SubContentStyles = {
         backgroundColor: "#fff",
@@ -13,8 +21,11 @@ export const Profile = () => {
         fontSize: "1.5vw",
 
     }
+    const WorkLinkPoint = { textDecoration: "none", cursor: "pointer", color: "#009CC1" };
+    const [open, setOpen] = useState(false);
     return (
         <div>
+            <Header mode="profile" />
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={1} >
                     <Grid item xs={4}>
@@ -39,7 +50,7 @@ export const Profile = () => {
                     </Grid>
                     <Grid item xs={4}>
                         <div style={SubContentStyles}>
-                            <div className="japanese_L" style={{ padding: "1vw 0", fontSize: "2vw" }}>
+                            <div className="japanese_L" style={{ padding: "2vw 0", fontSize: "2vw" }}>
                                 Language Usage Rate
                             </div>
                             <div style={{ width: "19vw", textAlign: "center" as "center", margin: "auto auto" }}>
@@ -97,7 +108,7 @@ export const Profile = () => {
                         <div style={{
                             backgroundColor: "#fff",
                             color: "black",
-                            width: "44.5vw",
+                            width: "44.7vw",
                             padding: "8.2vw 10.2vw",
                             textAlign: "center" as "center",
                             marginLeft: "0.5vw",
@@ -114,29 +125,37 @@ export const Profile = () => {
                     <Grid item xs={4}>
                         <div style={{ marginRight: "1vw" }}>
                             <div style={SubContentStyles}>
-                                <div className="japanese_L" style={{ padding: "1vw 0", fontSize: "2vw" }}>
+                                <div className="japanese_L" style={{ padding: "2vw 0", fontSize: "2vw" }}>
                                     Work Experience
                                 </div>
                                 <Grid container alignItems={"center"} justifyItems={"center"} spacing={1}>
                                     <Grid item xs={6}>
-                                        <div className="japanese_L" style={{ fontSize: "2vw", textAlign: "left" as "left", margin: "3vw 3vw" }}>
-                                            <a href="" style={{ textDecoration: "none" }}> ・React</a>
+                                        <div className="japanese_B" style={{ fontSize: "2vw", textAlign: "left" as "left", marginLeft: "4vw" }}>
+                                            <a onClick={() => {
+                                                setOpen(true);
+                                            }} style={WorkLinkPoint}> ・React</a>
                                             <br />
-                                            <a href="" style={{ textDecoration: "none" }}>
+                                            <a onClick={() => {
+                                                alert("test")
+                                            }} style={WorkLinkPoint}>
                                                 ・Vue
                                             </a>
                                             <br />
-                                            <a href="" style={{ textDecoration: "none" }}>
+                                            <a onClick={() => {
+                                                alert("test")
+                                            }} style={WorkLinkPoint}>
                                                 ・Express
                                             </a>
                                             <br />
-                                            <a href="" style={{ textDecoration: "none" }}>
+                                            <a onClick={() => {
+                                                alert("test")
+                                            }} style={WorkLinkPoint}>
                                                 ・Unity
                                             </a>
                                         </div>
                                     </Grid>
                                     <Grid item xs={6}>
-                                        <img src="https://avatars.githubusercontent.com/u/35647163?v=4" style={{ width: "50%", height: "50%", borderRadius: "50%", border: "solid 1px #00000029" }} />
+                                        <img src="work_image.png" style={{ width: "80%", height: "80%" }} />
                                     </Grid>
                                 </Grid>
                             </div>
@@ -146,6 +165,11 @@ export const Profile = () => {
                 </Grid>
 
             </Box>
+            {
+                open && <DetailDialog open={open} setOpen={function (): void {
+                    setOpen(false);
+                }} title={"React"} content={"WebアプリやLIFFアプリケーションの開発依頼・経験あり。React + TypeScriptを用いた厳格なシステム開発が可能です。"} image={""} />
+            }
         </div >
     )
 }

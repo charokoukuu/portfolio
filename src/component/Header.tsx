@@ -1,7 +1,7 @@
 import { Button, Grid } from "@mui/material"
 import '../App.css';
-
-type Mode = "profile" | "works" | "blog" | "contact";
+import { Link } from "react-router-dom";
+export type Mode = "profile" | "works" | "blog" | "contact";
 export const Header = (props: { mode: Mode }) => {
     return (
         <div className="header">
@@ -19,7 +19,8 @@ export const Header = (props: { mode: Mode }) => {
                 <div >
                     <Grid container >
                         <Grid item xs={3}>
-                            <Button>
+                            <Button component={Link}
+                                to="/">
                                 <div className="header_button">
                                     Profile
                                 </div>
@@ -27,7 +28,8 @@ export const Header = (props: { mode: Mode }) => {
                             {props.mode === "profile" && <ItemBar />}
                         </Grid>
                         <Grid item xs={3}>
-                            <Button>
+                            <Button component={Link}
+                                to="/works">
                                 <div className="header_button">
                                     Works
                                 </div>
@@ -36,7 +38,8 @@ export const Header = (props: { mode: Mode }) => {
 
                         </Grid>
                         <Grid item xs={3}>
-                            <Button>
+                            <Button component={Link}
+                                to="/blog">
                                 <div className="header_button">
                                     Blog
                                 </div>
@@ -44,7 +47,8 @@ export const Header = (props: { mode: Mode }) => {
                             {props.mode === "blog" && <ItemBar />}
                         </Grid>
                         <Grid item xs={3}>
-                            <Button>
+                            <Button component={Link}
+                                to="/contact">
                                 <div className="header_button">
                                     Contact
                                 </div>
