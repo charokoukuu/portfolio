@@ -13,9 +13,8 @@ const Router = () => {
                 <div>
                     <Routes>
                         <Route path="/" element={<Profile />} />
-                        <Route path="/works" element={<Works />} />
-                        <Route path="/works/:id" element={<WorksDetail />} />
-                        <Route path="/blog" element={<Profile />} />
+                        <Route path="/product" element={<Works />} />
+                        <Route path="/product/:id" element={<WorksDetail />} />
                         <Route path="/contact" element={<Profile />} />
 
                         {/* Not Found */}

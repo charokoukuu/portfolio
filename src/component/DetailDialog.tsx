@@ -47,7 +47,7 @@ export const DetailDialog = (props: DialogProps) => {
                 </DialogContent>
 
                 <Button variant='outlined' component={Link}
-                    to="/works" onClick={props.setOpen} style={{
+                    to="/product" onClick={props.setOpen} style={{
                         margin: "0 auto 3vw auto",
                         width: "30%",
                     }}>詳細を見る</Button>

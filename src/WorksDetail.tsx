@@ -1,9 +1,9 @@
-import { Grid } from "@mui/material"
+import { Button, Grid } from "@mui/material"
 import { Header } from "./component/Header"
 import { Home } from "./Home"
 import { doc, DocumentData, getDoc } from "firebase/firestore";
 import { db } from "./Firebase";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { WorksContentProps } from "./Works";
 import { Carousel } from "react-responsive-carousel";
@@ -35,7 +35,7 @@ export const WorksDetail = () => {
     }, []);
     return (
         <div>
-            <Header mode={"works"} />
+            <Header mode={"product"} />
             <Grid container alignItems="center" justifyContent={"center"}>
                 <Grid item sm={12} md={8} style={{ backgroundColor: "#fff" }}>
                     <div style={{
@@ -57,6 +57,22 @@ export const WorksDetail = () => {
 
                     </div>
                     <CarouselMenu image={(data !== undefined) ? data.image : []} />
+                    <div className="japanese_L" style={{
+                        margin: "2vw 0 3vw 0",
+                        fontSize: "1.5vw",
+                        textAlign: "center" as "center",
+                    }}>
+                        カテゴリ：{data?.category}
+                        <br />
+                        使用技術：{data?.framework}
+                    </div>
+                    <div style={{
+                        textAlign: "center" as "center",
+                        marginBottom: "3vw",
+                    }}><Button component={Link} to={"/product"} variant="outlined" style={{
+                        width: "20vw",
+                        height: "4vw",
+                    }}>開発実績に戻る</Button></div>
                 </Grid>
             </Grid>
         </div>

@@ -66,6 +66,9 @@ export const Profile = () => {
                                 <div className="japanese_L" style={{
                                     margin: "1vw 0",
                                 }}>Hinata Saito</div>
+                                <div className="japanese_L" style={{
+                                    margin: "1vw 0",
+                                }}>2001-10-31</div>
                                 <a className="japanese_L" href="https://github.com/charokoukuu" style={{ color: "#0C8F9A" }}>https://github.com/charokoukuu</a>
                             </div>
                         </Grid>
@@ -131,17 +134,84 @@ export const Profile = () => {
                                 backgroundColor: "#fff",
                                 color: "black",
                                 width: "44.7vw",
-                                padding: "8.2vw 10.2vw",
+                                padding: "9.3vw 10.2vw",
                                 textAlign: "center" as "center",
                                 marginLeft: "0.5vw",
                                 marginTop: "1vw",
                                 boxShadow: "inset 0px 3px 10px #00000029",
                                 borderRadius: "11px",
                                 fontSize: "1.5vw",
-
+                                position: "relative"
 
                             }}>
-                                テストぺージ
+                                <Grid container alignItems={"center"} justifyItems={"center"} spacing={1}>
+                                    <Grid item xs={4}>
+                                        <div style={{
+                                            position: "absolute",
+                                            top: "1vw",
+                                            left: "1vw",
+                                            width: "21vw",
+                                            height: "18vw",
+                                        }}>
+                                            <h2 className="japanese_R" style={{
+                                                color: "#707070",
+                                            }} >
+                                                Hobby
+                                            </h2>
+                                            <div className="japanese_L">
+                                                ピアノ
+                                                <br />
+                                                DTM / 作曲
+                                                <br />
+                                                ツーリング
+                                            </div>
+                                        </div>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <div style={{
+                                            position: "absolute",
+                                            top: "1vw",
+                                            left: "22vw",
+                                            width: "21vw",
+                                            height: "18vw",
+                                        }}>
+                                            <h2 className="japanese_R" style={{
+                                                color: "#707070",
+                                            }} >
+                                                Hobby
+                                            </h2>
+                                            <div className="japanese_L">
+                                                ピアノ
+                                                <br />
+                                                DTM/作曲
+                                                <br />
+                                                ツーリング
+                                            </div>
+                                        </div>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <div style={{
+                                            position: "absolute",
+                                            top: "1vw",
+                                            left: "43vw",
+                                            width: "21vw",
+                                            height: "18vw",
+                                        }}>
+                                            <h2 className="japanese_R" style={{
+                                                color: "#707070",
+                                            }} >
+                                                Hobby
+                                            </h2>
+                                            <div className="japanese_L">
+                                                ピアノ
+                                                <br />
+                                                DTM/作曲
+                                                <br />
+                                                ツーリング
+                                            </div>
+                                        </div>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </Grid>
                         <Grid item xs={4}>
@@ -167,7 +237,7 @@ export const Profile = () => {
                                                     setWork({
                                                         title: "Vue",
                                                         content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
-                                                        image: "https://jp.vuejs.org/images/logo.png",
+                                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png",
                                                     });
                                                 }} style={WorkLinkPoint}>
                                                     Vue

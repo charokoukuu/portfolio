@@ -1,7 +1,7 @@
 import { Button, Grid } from "@mui/material"
 import '../App.css';
 import { Link } from "react-router-dom";
-export type Mode = "profile" | "works" | "blog" | "contact";
+export type Mode = "profile" | "product" | "blog" | "contact";
 export const Header = (props: { mode: Mode }) => {
     return (
         <div className="header">
@@ -29,17 +29,16 @@ export const Header = (props: { mode: Mode }) => {
                         </Grid>
                         <Grid item xs={3}>
                             <Button component={Link}
-                                to="/works">
+                                to="/product">
                                 <div className="header_button">
-                                    Works
+                                    Product
                                 </div>
                             </Button>
-                            {props.mode === "works" && <ItemBar />}
+                            {props.mode === "product" && <ItemBar />}
 
                         </Grid>
                         <Grid item xs={3}>
-                            <Button component={Link}
-                                to="/blog">
+                            <Button href="https://blog.tb-works.com/" target={"_blank"}>
                                 <div className="header_button">
                                     Blog
                                 </div>

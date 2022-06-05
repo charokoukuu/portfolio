@@ -21,6 +21,18 @@ html {
   color: #707070;
 }
 
+.link {
+  color: "#009CC1";
+  /* text-decoration: "none";
+  cursor: "pointer";
+  margin-left: "2vw"; */
+
+}
+
+a:hover {
+  color: #ffbb00;
+}
+
 .header_button {
   font-family: japan_l;
   font-size: large;

@@ -47,7 +47,7 @@ export const AppDetail = (props: AppDetailProps) => {
                             </Box>
                             <br />
                             <a href="https://forms.gle/u6ZU6zW7qH2itvHJ8" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                                <Button variant="outlined" style={{ marginBlock: "5px", paddingBlock: "10px", color: "#3FC767", width: "150px", borderRadius: "30px", borderColor: "#3FC767" }}>見積もりの依頼</Button>
+                                {/* <Button variant="outlined" style={{ marginBlock: "5px", paddingBlock: "10px", color: "#3FC767", width: "150px", borderRadius: "30px", borderColor: "#3FC767" }}>見積もりの依頼</Button> */}
                             </a>
                         </Grid>
                         <Grid item sm={12} md={7} style={{ background: `url(${lineappimg})`, backgroundSize: "cover" }}>

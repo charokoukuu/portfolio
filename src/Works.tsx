@@ -34,7 +34,7 @@ export const Works = () => {
 
     return (
         <div>
-            <Header mode={"works"} />
+            <Header mode={"product"} />
             <Home />
             <Grid container alignItems="center" justifyContent={"center"}>
                 <Grid item sm={12} md={8} style={{ backgroundColor: "#fff" }}>
@@ -48,14 +48,14 @@ export const Works = () => {
                             fontSize: "2vw",
                             margin: "2vw auto",
                             textAlign: "center" as "center",
-                        }}>開発実績</div>
+                        }}>開発・実績</div>
                         <div style={{
                             backgroundColor: "rgba(0,0,0,0.3)",
                             width: "5vw",
                             height: "0.2vw",
                             margin: "0 auto",
                         }}></div>
-                        <Grid container >
+                        <Grid container alignContent={"left"} justifyItems={"left"}>
                             {
                                 allData && allData.map((data: DocumentData) => {
                                     return <Card data={
@@ -81,8 +81,7 @@ const Card = (props: { data: WorksContentProps }) => {
     const CardStyle = {
         backgroundColor: "#FFFFFF",
         borderRadius: "10px",
-        width: "22vw",
-        padding: "0.2vw 0",
+        width: "20vw",
         margin: "0 auto",
         boxShadow: "0px 3px 6px #00000029"
     }
@@ -96,24 +95,29 @@ const Card = (props: { data: WorksContentProps }) => {
         }}>
             <Grid item xs={6} style={{ backgroundColor: "#fff" }}>
                 <Button component={Link}
-                    to={"/works/" + props.data.id} style={CardStyle}>
+                    to={"/product/" + props.data.id} style={CardStyle}>
                     <Grid container alignItems="center" justifyContent={"center"}>
                         <Grid item xs={6}>
                             <img style={{
                                 width: "40%",
-                                margin: "auto 0 auto 3vw",
+                                margin: "1vw 0 auto 3vw",
                             }} src={props.data.image[0]} ></img>
                         </Grid>
                         <Grid item xs={6}>
                             <div style={{
-                                whiteSpace: "pre-wrap",
-                                wordWrap: "break-word",
-                                width: "80%",
-                                textAlign: "left" as "left",
-                                margin: "auto",
-                                fontSize: "1.2vw",
+                                width: "10vw",
+                                height: "8vw",
+                                padding: "0 1vw",
+                                position: "relative",
+                                fontSize: "1.1vw",
                             }}>
-                                {props.data.title}</div>
+                                <div style={{
+                                    position: "absolute",
+                                    top: "50%",
+                                    left: "50%",
+                                    transform: "translate(-50%,-50%)",
+                                    textTransform: 'none'
+                                }}>{props.data.title}</div></div>
                         </Grid>
                     </Grid>
 

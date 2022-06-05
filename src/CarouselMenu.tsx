@@ -4,6 +4,10 @@ export const CarouselMenu = (props: { image: Array<string> }) => {
     return (
         <Carousel
             navButtonsAlwaysVisible={true}
+            autoPlay={true}
+            stopAutoPlayOnHover={true}
+            interval={5000}
+            swipe={true}
             indicatorIconButtonProps={{
                 style: {
                     padding: '0 15px',
@@ -11,12 +15,12 @@ export const CarouselMenu = (props: { image: Array<string> }) => {
             }}
             indicatorContainerProps={{
                 style: {
-                    margin: "3px 0px 0px 0px"
+                    margin: "3.5vw 0px 0px 0px"
                 }
             }}
             navButtonsWrapperProps={{
                 style: {
-                    marginTop: "2px",
+                    margin: "0px 20px",
                 }
             }}
             navButtonsProps={{
@@ -33,8 +37,8 @@ export const CarouselMenu = (props: { image: Array<string> }) => {
         >
             {
                 props.image.map((image: string) => {
-                    return <div style={{ textAlign: "center" as "center" }}><img style={{
-                        width: "35vw"
+                    return <div style={{ textAlign: "center" as "center", marginTop: "5.5vw" }}><img style={{
+                        width: "32vw"
                     }} src={image} /></div>
                 })
             }
