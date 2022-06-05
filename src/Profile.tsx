@@ -25,6 +25,7 @@ export const Profile = () => {
     }
     const WorkLinkPoint = { textDecoration: "none", cursor: "pointer", color: "#009CC1", marginLeft: "2vw" };
     const [open, setOpen] = useState(false);
+    const [isMouseOver, setIsMouseOver] = useState(false);
     const [work, setWork] = useState<WorkContentDialogProps>({
         title: "",
         content: "",
@@ -42,7 +43,12 @@ export const Profile = () => {
         },
     }
     const styles = useSpring(animation)
-
+    const BlackFont = {
+        margin: "5vw 3vw",
+        color: "#fff",
+        fontSize: "1.5vw",
+        fontWeight: "bold",
+    }
     return (
         <animated.div style={styles}>
             <div>
@@ -73,7 +79,33 @@ export const Profile = () => {
                             </div>
                         </Grid>
                         <Grid item xs={4}>
-                            <div style={SubContentStyles}>
+                            <div style={{ ...SubContentStyles, position: "relative" }}>
+                                {isMouseOver && <div style={{
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    width: "100%",
+                                    height: "100%",
+                                    backgroundColor: "rgba(0,0,0,0.6)",
+                                    borderRadius: "11px",
+                                    pointerEvents: "none"
+                                }}>
+
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#0C8F9A" }}>TypeScript</span>: React,Vue.jsで利用</div>
+                                    <br />
+                                    <br />
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#FFC107" }}>JavaScript</span>: Node.js(Express)で利用</div>
+                                    <br />
+                                    <br />
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#F44336" }}>C#</span>: Unityで利用</div>
+                                    <br />
+                                    <br />
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#03A9F4" }}>C++</span>: マイコン制御,openCVで利用</div>
+                                    <br />
+                                    <br />
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#4CAF50" }}>Python</span>: GPIO制御,WebSocketで利用</div>
+                                </div>
+                                }
                                 <div className="japanese_L" style={{ padding: "2vw 0", fontSize: "2vw" }}>
                                     Language Usage Rate
                                 </div>
@@ -115,7 +147,10 @@ export const Profile = () => {
                                         lineWidth={40}
                                         paddingAngle={2}
                                         onMouseOver={() => {
-                                            // alert("over");
+                                            setIsMouseOver(true)
+                                        }}
+                                        onMouseOut={() => {
+                                            setIsMouseOver(false)
                                         }}
                                         radius={40}
                                         viewBoxSize={[100, 100]}
