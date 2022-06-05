@@ -54,7 +54,7 @@ export const Profile = () => {
                                 backgroundColor: "#fff",
                                 color: "black",
                                 width: "31vw",
-                                padding: "12vw 0",
+                                padding: "10.2vw 0",
                                 marginLeft: "1vw",
                                 textAlign: "center" as "center",
                                 margin: "0 auto",
@@ -149,7 +149,7 @@ export const Profile = () => {
                                         <div style={{
                                             position: "absolute",
                                             top: "1vw",
-                                            left: "1vw",
+                                            left: "0vw",
                                             width: "21vw",
                                             height: "18vw",
                                         }}>
@@ -164,6 +164,8 @@ export const Profile = () => {
                                                 DTM / 作曲
                                                 <br />
                                                 ツーリング
+                                                <br />
+                                                VRゲーム
                                             </div>
                                         </div>
                                     </Grid>
@@ -171,21 +173,19 @@ export const Profile = () => {
                                         <div style={{
                                             position: "absolute",
                                             top: "1vw",
-                                            left: "22vw",
-                                            width: "21vw",
+                                            left: "20vw",
+                                            width: "18vw",
                                             height: "18vw",
                                         }}>
                                             <h2 className="japanese_R" style={{
                                                 color: "#707070",
                                             }} >
-                                                Hobby
+                                                Achievement
                                             </h2>
                                             <div className="japanese_L">
-                                                ピアノ
+                                                SDLハッカソン 準優勝
                                                 <br />
-                                                DTM/作曲
-                                                <br />
-                                                ツーリング
+                                                （作品名：バイクは楽器）
                                             </div>
                                         </div>
                                     </Grid>
@@ -193,21 +193,20 @@ export const Profile = () => {
                                         <div style={{
                                             position: "absolute",
                                             top: "1vw",
-                                            left: "43vw",
+                                            left: "42vw",
                                             width: "21vw",
                                             height: "18vw",
                                         }}>
                                             <h2 className="japanese_R" style={{
                                                 color: "#707070",
                                             }} >
-                                                Hobby
+                                                Message
                                             </h2>
-                                            <div className="japanese_L">
-                                                ピアノ
-                                                <br />
-                                                DTM/作曲
-                                                <br />
-                                                ツーリング
+                                            <div className="japanese_L" style={{
+                                                textAlign: "left" as "left",
+                                            }}>
+                                                普段からモノづくりを楽しんでいます。
+                                                制作範囲はRaspberry Piを使った電子工作やゲーム制作など様々です。
                                             </div>
                                         </div>
                                     </Grid>
