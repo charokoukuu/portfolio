@@ -6,6 +6,9 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { WorkContentDialogProps } from '../Profile';
+import { Grid } from '@mui/material';
+import { margin } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 interface DialogProps extends WorkContentDialogProps {
     open: boolean;
@@ -17,30 +20,37 @@ export const DetailDialog = (props: DialogProps) => {
 
     return (
         <div>
-            <Button variant="outlined" onClick={props.setOpen}>
-                Open alert dialog
-            </Button>
             <Dialog
                 open={props.open}
                 onClose={props.setOpen}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
-                <DialogTitle id="alert-dialog-title">
-                    {"Use Google's location service?"}
-                </DialogTitle>
-                <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
-                        Let Google help apps determine location. This means sending anonymous
-                        location data to Google, even when no apps are running.
-                    </DialogContentText>
+                <DialogContent style={{
+                    padding: "1vw 3vw",
+                }}>
+                    <DialogTitle id="alert-dialog-title">
+                        <div className='japanese_B'> {props.title}</div>
+                    </DialogTitle>
+                    <Grid container alignItems="center" justifyItems="center" >
+                        <Grid item xs={4}>
+                            <img src={props.image} alt="icon" style={{ width: "100%", height: "100%" }} />
+                        </Grid>
+                        <Grid item xs={8} >
+                            <div className='japanese_L' style={{
+                                whiteSpace: "pre-wrap",
+                                margin: "0 2vw",
+                                textAlign: "left" as "left",
+                            }}>{props.content}</div>
+                        </Grid>
+                    </Grid>
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={props.setOpen}>Disagree</Button>
-                    <Button onClick={props.setOpen} autoFocus>
-                        Agree
-                    </Button>
-                </DialogActions>
+
+                <Button variant='outlined' component={Link}
+                    to="/works" onClick={props.setOpen} style={{
+                        margin: "0 auto 3vw auto",
+                        width: "30%",
+                    }}>詳細を見る</Button>
             </Dialog>
         </div>
     );

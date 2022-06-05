@@ -18,6 +18,7 @@ html {
 
 .japanese_L {
   font-family: japan_l;
+  color: #707070;
 }
 
 .header_button {
@@ -25,6 +26,10 @@ html {
   font-size: large;
   color: #707070;
 
+}
+
+.text {
+  white-space: pre-wrap;
 }
 
 @font-face {

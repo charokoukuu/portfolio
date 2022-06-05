@@ -40,18 +40,6 @@ export const DevelopmentList = () => {
             </IntroApp>
             <IntroApp
                 isImageRight={true}
-                title="モバイルアプリ"
-                background={mobileAppBack}
-                appImage={mobileApp}
-                pastOnclick={() => {
-                    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc3USPu6utUR3epLFtgG_NPXQ-yrJFmDpDFps_ApyWRq5qegg/viewform"
-                }}
-                requestOnclick={() => { }}
-                themaColor="#0088CC" >
-                手軽に使えるアプリをモダンなUIで<br />完全オリジナルアプリを開発
-            </IntroApp>
-            <IntroApp
-                isImageRight={false}
                 title="Webアプリ"
                 background={webAppBack}
                 appImage={webApp}

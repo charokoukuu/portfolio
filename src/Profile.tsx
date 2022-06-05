@@ -23,6 +23,11 @@ export const Profile = () => {
     }
     const WorkLinkPoint = { textDecoration: "none", cursor: "pointer", color: "#009CC1" };
     const [open, setOpen] = useState(false);
+    const [work, setWork] = useState<WorkContentDialogProps>({
+        title: "",
+        content: "",
+        image: "",
+    });
     return (
         <div>
             <Header mode="profile" />
@@ -133,22 +138,42 @@ export const Profile = () => {
                                         <div className="japanese_B" style={{ fontSize: "2vw", textAlign: "left" as "left", marginLeft: "4vw" }}>
                                             <a onClick={() => {
                                                 setOpen(true);
+                                                setWork({
+                                                    title: "React",
+                                                    content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                    image: "https://www.shareicon.net/data/2016/07/10/119874_apps_512x512.png",
+                                                });
                                             }} style={WorkLinkPoint}> ・React</a>
                                             <br />
                                             <a onClick={() => {
-                                                alert("test")
+                                                setOpen(true);
+                                                setWork({
+                                                    title: "Vue",
+                                                    content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                    image: "https://jp.vuejs.org/images/logo.png",
+                                                });
                                             }} style={WorkLinkPoint}>
                                                 ・Vue
                                             </a>
                                             <br />
                                             <a onClick={() => {
-                                                alert("test")
+                                                setOpen(true);
+                                                setWork({
+                                                    title: "Express",
+                                                    content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                    image: "https://cdn-icons-png.flaticon.com/512/919/919825.png?w=360",
+                                                });
                                             }} style={WorkLinkPoint}>
                                                 ・Express
                                             </a>
                                             <br />
                                             <a onClick={() => {
-                                                alert("test")
+                                                setOpen(true);
+                                                setWork({
+                                                    title: "Unity",
+                                                    content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                    image: "https://preview.redd.it/81nwobjayd181.png?width=512&format=png&auto=webp&s=027cac2b3ddd6f7b3f5e60a783706d1d0e8151ec",
+                                                });
                                             }} style={WorkLinkPoint}>
                                                 ・Unity
                                             </a>
@@ -168,7 +193,7 @@ export const Profile = () => {
             {
                 open && <DetailDialog open={open} setOpen={function (): void {
                     setOpen(false);
-                }} title={"React"} content={"WebアプリやLIFFアプリケーションの開発依頼・経験あり。React + TypeScriptを用いた厳格なシステム開発が可能です。"} image={""} />
+                }} title={work.title} content={work.content} image={work.image} />
             }
         </div >
     )
