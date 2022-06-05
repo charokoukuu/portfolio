@@ -43,12 +43,32 @@ export const Works = () => {
                         margin: "0 auto",
                         backgroundColor: "#fff",
                     }}>
-
-                        {
-                            allData && allData.map((data: DocumentData) => {
-                                return <Card data={data} />
-                            })
-                        }
+                        <div className="japanese_L" style={{
+                            fontSize: "2vw",
+                            margin: "2vw auto",
+                            textAlign: "center" as "center",
+                        }}>開発実績</div>
+                        <div style={{
+                            backgroundColor: "rgba(0,0,0,0.3)",
+                            width: "5vw",
+                            height: "0.2vw",
+                            margin: "0 auto",
+                        }}></div>
+                        <Grid container >
+                            {
+                                allData && allData.map((data: DocumentData) => {
+                                    return <Card data={
+                                        {
+                                            title: data.title,
+                                            category: data.category,
+                                            framework: data.framework,
+                                            image: data.image,
+                                            id: data.id,
+                                        }
+                                    } />
+                                })
+                            }
+                        </Grid>
                     </div>
                 </Grid>
             </Grid>
@@ -56,12 +76,12 @@ export const Works = () => {
     );
 }
 
-const Card = (props: { data: any }) => {
+const Card = (props: { data: WorksContentProps }) => {
     const CardStyle = {
         backgroundColor: "#FFFFFF",
         borderRadius: "10px",
-        width: "25vw",
-        padding: "3vw 0",
+        width: "22vw",
+        padding: "1vw 0",
         margin: "0 auto",
         boxShadow: "0px 3px 6px #00000029"
     }
@@ -73,30 +93,29 @@ const Card = (props: { data: any }) => {
         <div style={{
             margin: "2vw auto",
         }}>
-            <Grid container alignItems="center" justifyContent={"center"}>
-                <Grid item xs={6} style={{ backgroundColor: "#fff" }}>
-                    <div style={CardStyle}>
-                        <Grid container alignItems="center" justifyContent={"center"}>
-                            <Grid item xs={6}>
-                            </Grid>
-                            <Grid item xs={6}>
-                                <div style={{
-                                    whiteSpace: "pre-wrap",
-                                    wordWrap: "break-word",
-                                    width: "70%",
-                                    textAlign: "left" as "left",
-                                    margin: "auto",
-                                    fontSize: "1.2vw",
-                                }}>
-                                    {"賃貸マンション検索サービス"}</div>
-                            </Grid>
+            <Grid item xs={6} style={{ backgroundColor: "#fff" }}>
+                <div style={CardStyle}>
+                    <Grid container alignItems="center" justifyContent={"center"}>
+                        <Grid item xs={6}>
+                            <img style={{
+                                width: "40%",
+                                margin: "auto 0 auto 3vw",
+                            }} src={props.data.image[0]} ></img>
                         </Grid>
+                        <Grid item xs={6}>
+                            <div style={{
+                                whiteSpace: "pre-wrap",
+                                wordWrap: "break-word",
+                                width: "80%",
+                                textAlign: "left" as "left",
+                                margin: "auto",
+                                fontSize: "1.2vw",
+                            }}>
+                                {props.data.title}</div>
+                        </Grid>
+                    </Grid>
 
-                    </div>
-                </Grid>
-                <Grid item xs={6} style={{ backgroundColor: "#fff" }}>
-                    <div style={CardStyle}></div>
-                </Grid>
+                </div>
             </Grid>
         </div>
     )
