@@ -1,11 +1,12 @@
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { collection, doc, DocumentData, getDoc, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "./component/Header";
 import { db } from "./Firebase";
 import { Home } from "./Home";
 
-interface WorksContentProps {
+export interface WorksContentProps {
     title: string;
     category: string;
     framework: string;
@@ -81,7 +82,7 @@ const Card = (props: { data: WorksContentProps }) => {
         backgroundColor: "#FFFFFF",
         borderRadius: "10px",
         width: "22vw",
-        padding: "1vw 0",
+        padding: "0.2vw 0",
         margin: "0 auto",
         boxShadow: "0px 3px 6px #00000029"
     }
@@ -94,7 +95,8 @@ const Card = (props: { data: WorksContentProps }) => {
             margin: "2vw auto",
         }}>
             <Grid item xs={6} style={{ backgroundColor: "#fff" }}>
-                <div style={CardStyle}>
+                <Button component={Link}
+                    to={"/works/" + props.data.id} style={CardStyle}>
                     <Grid container alignItems="center" justifyContent={"center"}>
                         <Grid item xs={6}>
                             <img style={{
@@ -115,7 +117,7 @@ const Card = (props: { data: WorksContentProps }) => {
                         </Grid>
                     </Grid>
 
-                </div>
+                </Button>
             </Grid>
         </div>
     )

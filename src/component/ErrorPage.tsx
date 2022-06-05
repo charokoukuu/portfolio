@@ -15,7 +15,7 @@ export const ErrorPage = (props: ErrorPageProps) => {
 
                 </h1>
                 <div style={{ marginTop: "7vh", textAlign: "center" as "center" }}>
-                    <Button >{props.buttonText} </Button>
+                    <Button onClick={props.onClick}>{props.buttonText} </Button>
                 </div>
             </div>
         </div>

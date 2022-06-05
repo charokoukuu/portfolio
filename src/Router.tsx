@@ -5,6 +5,7 @@ import { ErrorPage } from './component/ErrorPage';
 import { FadeInSample } from './FadeInSample';
 import { Profile } from './Profile';
 import { Works } from './Works';
+import { WorksDetail } from './WorksDetail';
 const Router = () => {
     return (
         <div>
@@ -13,7 +14,7 @@ const Router = () => {
                     <Routes>
                         <Route path="/" element={<Profile />} />
                         <Route path="/works" element={<Works />} />
-                        <Route path="/test" element={<FadeInSample />} />
+                        <Route path="/works/:id" element={<WorksDetail />} />
                         <Route path="/blog" element={<Profile />} />
                         <Route path="/contact" element={<Profile />} />
 
