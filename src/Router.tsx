@@ -2,6 +2,7 @@ import * as React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import { ErrorPage } from './component/ErrorPage';
+import { FadeInSample } from './FadeInSample';
 import { Profile } from './Profile';
 import { Works } from './Works';
 const Router = () => {
@@ -12,6 +13,7 @@ const Router = () => {
                     <Routes>
                         <Route path="/" element={<Profile />} />
                         <Route path="/works" element={<Works />} />
+                        <Route path="/test" element={<FadeInSample />} />
                         <Route path="/blog" element={<Profile />} />
                         <Route path="/contact" element={<Profile />} />
 
