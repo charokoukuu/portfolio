@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './App';
 import { ErrorPage } from './component/ErrorPage';
-import { FadeInSample } from './FadeInSample';
+import { Contact } from './Contact';
 import { Profile } from './Profile';
 import { Works } from './Works';
 import { WorksDetail } from './WorksDetail';
@@ -15,7 +14,7 @@ const Router = () => {
                         <Route path="/" element={<Profile />} />
                         <Route path="/product" element={<Works />} />
                         <Route path="/product/:id" element={<WorksDetail />} />
-                        <Route path="/contact" element={<Profile />} />
+                        <Route path="/contact" element={<Contact />} />
 
                         {/* Not Found */}
 

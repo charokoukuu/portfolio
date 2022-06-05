@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PieChart } from 'react-minimal-pie-chart';
 import { animated, useSpring } from "react-spring";
 import { DetailDialog } from "./component/DetailDialog";
@@ -68,7 +68,7 @@ export const Profile = () => {
                                 borderRadius: "11px",
                                 fontSize: "1.5vw",
                             }}>
-                                <img src="https://avatars.githubusercontent.com/u/35647163?v=4" style={{ width: "50%", height: "50%", borderRadius: "50%", border: "solid 1px #00000029" }} />
+                                <img alt="github" src="https://avatars.githubusercontent.com/u/35647163?v=4" style={{ width: "50%", height: "50%", borderRadius: "50%", border: "solid 1px #00000029" }} />
                                 <div className="japanese_L" style={{
                                     margin: "1vw 0",
                                 }}>Hinata Saito</div>
@@ -257,16 +257,16 @@ export const Profile = () => {
                                     <Grid container alignItems={"center"} justifyItems={"center"} spacing={1}>
                                         <Grid item xs={6}>
                                             <div className="japanese_B" style={{ fontSize: "2vw", textAlign: "left" as "left", marginLeft: "4vw" }}>
-                                                <a onClick={() => {
+                                                <p onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "React",
                                                         content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
                                                         image: "https://www.shareicon.net/data/2016/07/10/119874_apps_512x512.png",
                                                     });
-                                                }} style={WorkLinkPoint}> React</a>
+                                                }} style={WorkLinkPoint}> React</p>
                                                 <br />
-                                                <a onClick={() => {
+                                                <p onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "Vue",
@@ -275,9 +275,9 @@ export const Profile = () => {
                                                     });
                                                 }} style={WorkLinkPoint}>
                                                     Vue
-                                                </a>
+                                                </p>
                                                 <br />
-                                                <a onClick={() => {
+                                                <p onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "Express",
@@ -286,9 +286,9 @@ export const Profile = () => {
                                                     });
                                                 }} style={WorkLinkPoint}>
                                                     Express
-                                                </a>
+                                                </p>
                                                 <br />
-                                                <a onClick={() => {
+                                                <p onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "Unity",
@@ -297,11 +297,11 @@ export const Profile = () => {
                                                     });
                                                 }} style={WorkLinkPoint}>
                                                     Unity
-                                                </a>
+                                                </p>
                                             </div>
                                         </Grid>
                                         <Grid item xs={6}>
-                                            <img src="work_image.png" style={{ width: "80%", height: "80%" }} />
+                                            <img alt="work" src="work_image.png" style={{ width: "80%", height: "80%" }} />
                                         </Grid>
                                     </Grid>
                                 </div>

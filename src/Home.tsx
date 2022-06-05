@@ -1,7 +1,6 @@
 import { Box, Grid } from "@mui/material"
 import React from "react"
 import { DevelopmentList } from "./DevelopmentList"
-import top from "./img/top.png"
 
 export const Home = () => {
     return (

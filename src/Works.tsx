@@ -1,5 +1,5 @@
 import { Button, Grid } from "@mui/material";
-import { collection, doc, DocumentData, getDoc, getDocs } from "firebase/firestore";
+import { collection, DocumentData, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "./component/Header";
@@ -14,7 +14,6 @@ export interface WorksContentProps {
     id: string;
 }
 export const Works = () => {
-    const [workData, setWorkData] = useState<DocumentData>();
     const [allData, setAllData] = useState<Array<DocumentData>>();
     const GetData = async () => {
         const querySnapshot = await getDocs(collection(db, "develop"));
@@ -85,10 +84,7 @@ const Card = (props: { data: WorksContentProps }) => {
         margin: "0 auto",
         boxShadow: "0px 3px 6px #00000029"
     }
-    const autobr = {
-        whiteSpace: "pre-wrap",
-        wordWrap: "break-word",
-    }
+
     return (
         <div style={{
             margin: "2vw auto",
@@ -98,7 +94,7 @@ const Card = (props: { data: WorksContentProps }) => {
                     to={"/product/" + props.data.id} style={CardStyle}>
                     <Grid container alignItems="center" justifyContent={"center"}>
                         <Grid item xs={6}>
-                            <img style={{
+                            <img alt="product" style={{
                                 width: "40%",
                                 margin: "1vw 0 auto 3vw",
                             }} src={props.data.image[0]} ></img>

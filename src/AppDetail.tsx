@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Modal } from "@mui/material"
+import { Box, Grid, Modal } from "@mui/material"
 import React from "react"
 import lineappimg from "./img/lineappimg.png"
 

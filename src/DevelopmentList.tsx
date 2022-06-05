@@ -1,14 +1,9 @@
-import { Box, Button, Grid, useMediaQuery, useTheme } from "@mui/material"
+import { Box, Grid, useMediaQuery, useTheme } from "@mui/material"
 import React, { ReactNode } from "react"
-import line from "./img/line.png"
-import mobile from "./img/native.png"
-import react from "./img/react.png"
 import lineMiniApp from "./img/lineminiapp.png"
 import lineBack from "./img/lineback.png"
 import webAppBack from "./img/webappback.png"
 import webApp from "./img/webapp.png"
-import mobileApp from "./img/mobileapp.png"
-import mobileAppBack from "./img/mobileappback.png"
 import { AppDetail } from "./AppDetail"
 
 export const DevelopmentList = () => {
@@ -56,38 +51,8 @@ export const DevelopmentList = () => {
     )
 }
 
-const AppList = () => {
-    return (
-        <Box style={{ background: "#F7F7F7DA 0% 0% no-repeat padding-box", padding: "20px", marginInline: "150px", marginBlock: "30px", borderRadius: "15px", boxShadow: "0px 3px 6px #00000029", }}>
-            <Grid container justifyItems="center" alignItems="center">
-                <Grid item xs={12} md={4} >
-                    <AppButton text="LINE miniApp" onClick={() => { }} img={line} />
-                </Grid>
-                <Grid item xs={12} md={4} >
-                    <AppButton text="MobileApp" onClick={() => { }} img={mobile} />
-                </Grid>
-                <Grid item xs={12} md={4} >
-                    <AppButton text="WebApp" onClick={() => { }} img={react} />
-                </Grid>
-            </Grid>
-        </Box>
-    )
-}
 
 
-type AppButtonProps = {
-    text: string,
-    onClick: () => void,
-    img: string
-}
-const AppButton = (props: AppButtonProps) => {
-    return (
-        <button>
-            <img src={props.img} alt="line" width="80px" />
-        </button>
-
-    )
-}
 
 type IntroAppProps = {
     isImageRight: boolean,
@@ -120,7 +85,7 @@ const IntroApp = (props: IntroAppProps) => {
                     </Box>
                     <Grid container>
                         <Grid item xs={12} lg={5}>
-                            <Button variant="outlined" onClick={props.pastOnclick} style={{ marginBlock: "5px", paddingBlock: "10px", color: "white", borderWidth: "0", width: "150px", borderRadius: "30px", backgroundColor: props.themaColor }}>詳しく見る</Button>
+                            {/* <Button variant="outlined" onClick={props.pastOnclick} style={{ marginBlock: "5px", paddingBlock: "10px", color: "white", borderWidth: "0", width: "150px", borderRadius: "30px", backgroundColor: props.themaColor }}>詳しく見る</Button> */}
                         </Grid>
                     </Grid>
                 </Grid>

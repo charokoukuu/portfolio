@@ -31,13 +31,13 @@ export const CarouselMenu = (props: { image: Array<string> }) => {
                     height: "7vw",
                 }
             }}
-            PrevIcon={<img style={{ width: "100vw" }} src="/chevron-left.svg" />}
-            NextIcon={<img style={{ width: "100vw" }} src="/chevron-right.svg" />}
+            PrevIcon={<img style={{ width: "100vw" }} alt="prev" src="/chevron-left.svg" />}
+            NextIcon={<img style={{ width: "100vw" }} alt="next" src="/chevron-right.svg" />}
 
         >
             {
                 props.image.map((image: string) => {
-                    return <div style={{ textAlign: "center" as "center", marginTop: "5.5vw" }}><img style={{
+                    return <div style={{ textAlign: "center" as "center", marginTop: "5.5vw" }}><img alt="map" style={{
                         width: "32vw"
                     }} src={image} /></div>
                 })

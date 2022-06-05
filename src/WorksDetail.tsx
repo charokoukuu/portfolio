@@ -1,12 +1,10 @@
 import { Button, Grid } from "@mui/material"
 import { Header } from "./component/Header"
-import { Home } from "./Home"
-import { doc, DocumentData, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "./Firebase";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { WorksContentProps } from "./Works";
-import { Carousel } from "react-responsive-carousel";
 import { CarouselMenu } from "./CarouselMenu";
 
 export const WorksDetail = () => {
@@ -31,7 +29,9 @@ export const WorksDetail = () => {
 
     }
     useEffect(() => {
+        console.log(loadStatus);
         GetData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
         <div>
