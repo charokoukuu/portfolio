@@ -18,7 +18,7 @@ export const Header = (props: { mode: Mode }) => {
             }}>
                 <div >
                     <Grid container >
-                        <Grid item xs={3}>
+                        <Grid item xs={4}>
                             <Button component={Link}
                                 to="/">
                                 <div className="header_button">
@@ -27,7 +27,7 @@ export const Header = (props: { mode: Mode }) => {
                             </Button>
                             {props.mode === "profile" && <ItemBar />}
                         </Grid>
-                        <Grid item xs={3}>
+                        <Grid item xs={4}>
                             <Button component={Link}
                                 to="/product">
                                 <div className="header_button">
@@ -37,15 +37,8 @@ export const Header = (props: { mode: Mode }) => {
                             {props.mode === "product" && <ItemBar />}
 
                         </Grid>
-                        <Grid item xs={3}>
-                            <Button href="https://blog.tb-works.com/" target={"_blank"}>
-                                <div className="header_button">
-                                    Blog
-                                </div>
-                            </Button>
-                            {props.mode === "blog" && <ItemBar />}
-                        </Grid>
-                        <Grid item xs={3}>
+
+                        <Grid item xs={4}>
                             <Button component={Link}
                                 to="/contact">
                                 <div className="header_button">

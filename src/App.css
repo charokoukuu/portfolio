@@ -29,7 +29,14 @@ html {
 
 }
 
-a:hover {
+.click {
+  text-decoration: "none";
+  cursor: "pointer";
+  color: "#009CC1";
+  margin-left: "2vw";
+}
+
+.click:hover {
   color: #ffbb00;
 }
 
