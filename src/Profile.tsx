@@ -23,7 +23,6 @@ export const Profile = () => {
         fontSize: "1.5vw",
 
     }
-    const WorkLinkPoint = { textDecoration: "none", cursor: "pointer", color: "#009CC1", marginLeft: "2vw" };
     const [open, setOpen] = useState(false);
     const [isMouseOver, setIsMouseOver] = useState(false);
     const [work, setWork] = useState<WorkContentDialogProps>({
@@ -91,19 +90,19 @@ export const Profile = () => {
                                     pointerEvents: "none"
                                 }}>
 
-                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#0C8F9A" }}>TypeScript</span>: React,Vue.jsで利用</div>
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#0C8F9A" }}>TypeScript</span>: React,Vue.js</div>
                                     <br />
                                     <br />
-                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#FFC107" }}>JavaScript</span>: Node.js(Express)で利用</div>
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#FFC107" }}>JavaScript</span>: Node.js(Express)</div>
                                     <br />
                                     <br />
-                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#F44336" }}>C#</span>: Unityで利用</div>
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#F44336" }}>C#</span>: Unity</div>
                                     <br />
                                     <br />
-                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#03A9F4" }}>C++</span>: マイコン制御,openCVで利用</div>
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#03A9F4" }}>C++</span>: ESP32,openCV</div>
                                     <br />
                                     <br />
-                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#4CAF50" }}>Python</span>: GPIO制御,WebSocketで利用</div>
+                                    <div className="japanese_R" style={{ ...BlackFont, position: "absolute" }}><span style={{ color: "#4CAF50" }}>Python</span>: Raspberry Pi,WebSocket</div>
                                 </div>
                                 }
                                 <div className="japanese_L" style={{ padding: "2vw 0", fontSize: "2vw" }}>
@@ -119,7 +118,7 @@ export const Profile = () => {
                                             {
                                                 color: '#0C8F9A',
                                                 title: "TypeScript",
-                                                value: 7,
+                                                value: 10,
                                             },
                                             {
                                                 color: "#FFC107",
@@ -129,12 +128,12 @@ export const Profile = () => {
                                             {
                                                 color: "#F44336",
                                                 title: "C#",
-                                                value: 10,
+                                                value: 7,
                                             },
                                             {
                                                 color: "#03A9F4",
                                                 title: "C++",
-                                                value: 7,
+                                                value: 5,
                                             },
                                             {
                                                 color: "#4CAF50",
@@ -218,7 +217,9 @@ export const Profile = () => {
                                                 Achievement
                                             </h2>
                                             <div className="japanese_L">
-                                                SDLハッカソン 準優勝
+                                                SDLアプリコンテスト
+                                                <br />
+                                                特別賞
                                                 <br />
                                                 （作品名：バイクは楽器）
                                             </div>
@@ -239,9 +240,10 @@ export const Profile = () => {
                                             </h2>
                                             <div className="japanese_L" style={{
                                                 textAlign: "left" as "left",
+                                                fontSize: "1.2vw"
                                             }}>
                                                 普段からモノづくりを楽しんでいます。
-                                                制作範囲はRaspberry Piを使った電子工作やゲーム制作など様々です。
+                                                制作範囲はRaspberry Piを使った電子工作やゲーム制作、CGアニメーションやWeb制作などと様々です。
                                             </div>
                                         </div>
                                     </Grid>
@@ -257,47 +259,36 @@ export const Profile = () => {
                                     <Grid container alignItems={"center"} justifyItems={"center"} spacing={1}>
                                         <Grid item xs={6}>
                                             <div className="japanese_B" style={{ fontSize: "2vw", textAlign: "left" as "left", marginLeft: "4vw" }}>
-                                                <p onClick={() => {
+                                                <a className="click" onClick={() => {
                                                     setOpen(true);
                                                     setWork({
-                                                        title: "React",
-                                                        content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                        title: "Frontend",
+                                                        content: "Webフレームワーク「React.js」「Vue.js」を使ったフロントエンド開発を行っています。",
                                                         image: "https://www.shareicon.net/data/2016/07/10/119874_apps_512x512.png",
                                                     });
-                                                }} style={WorkLinkPoint}> React</p>
+                                                }} style={{ cursor: "pointer" }}> Frontend</a>
                                                 <br />
-                                                <p onClick={() => {
+                                                <a className="click" onClick={() => {
                                                     setOpen(true);
                                                     setWork({
-                                                        title: "Vue",
-                                                        content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
-                                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png",
-                                                    });
-                                                }} style={WorkLinkPoint}>
-                                                    Vue
-                                                </p>
-                                                <br />
-                                                <p onClick={() => {
-                                                    setOpen(true);
-                                                    setWork({
-                                                        title: "Express",
-                                                        content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                        title: "Backend",
+                                                        content: "Node.jsのWebフレームワーク「Express」を使ったバックエンド開発を行っています。",
                                                         image: "https://cdn-icons-png.flaticon.com/512/919/919825.png?w=360",
                                                     });
-                                                }} style={WorkLinkPoint}>
-                                                    Express
-                                                </p>
+                                                }} style={{ cursor: "pointer" }}>
+                                                    Backend
+                                                </a>
                                                 <br />
-                                                <p onClick={() => {
+                                                <div className="click" onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "Unity",
-                                                        content: "WebアプリやLIFFアプリケーション\nの開発依頼・経験あり。\nReact + TypeScriptを用いた\n厳格なシステム開発が可能です。",
+                                                        content: "有限会社ふりーむでUnityを使ってゲーム制作を行うするアルバイトを3年程しておりました。",
                                                         image: "https://preview.redd.it/81nwobjayd181.png?width=512&format=png&auto=webp&s=027cac2b3ddd6f7b3f5e60a783706d1d0e8151ec",
                                                     });
-                                                }} style={WorkLinkPoint}>
+                                                }} style={{ cursor: "pointer" }}>
                                                     Unity
-                                                </p>
+                                                </div>
                                             </div>
                                         </Grid>
                                         <Grid item xs={6}>

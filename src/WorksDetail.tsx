@@ -21,6 +21,9 @@ export const WorksDetail = () => {
                 framework: docSnap.data()?.framework ?? "",
                 image: docSnap.data()?.image ?? [],
                 id: docSnap.id,
+                timeStamp: docSnap.data()?.timeStamp ?? "",
+                link: docSnap.data()?.link ?? "",
+                other: docSnap.data()?.other ?? "",
             });
             setLoadStatus("loaded");
         } else {
@@ -62,9 +65,20 @@ export const WorksDetail = () => {
                         fontSize: "1.5vw",
                         textAlign: "center" as "center",
                     }}>
-                        カテゴリ：{data?.category}
+                        <div style={{ width: "50vw", margin: "auto", textAlign: "left" as "left" }}> {data?.other}</div>
+                        {data?.link && <div>
+                            <br />
+                            <br />
+                            リンク: <a href={data?.link} target="_blank">{data?.link}</a>
+                        </div>}
                         <br />
-                        使用技術：{data?.framework}
+                        <br />
+                        使用技術: {data?.framework}
+                        <br />
+                        カテゴリ: {data?.category}
+                        <br />
+                        <br />
+                        {data?.link && <div>  製作時期: {data?.timeStamp}</div>}
                     </div>
                     <div style={{
                         textAlign: "center" as "center",
