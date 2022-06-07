@@ -69,7 +69,7 @@ export const WorksDetail = () => {
                         {data?.link && <div>
                             <br />
                             <br />
-                            リンク: <a href={data?.link} target="_blank">{data?.link}</a>
+                            リンク: <a href={data?.link} target="_blank" rel="noreferrer" >{data?.link}</a>
                         </div>}
                         <br />
                         <br />

@@ -3,7 +3,6 @@ import { DocumentData } from "firebase/firestore"
 import React from "react"
 import { Link } from "react-router-dom"
 import { DevelopmentList } from "./DevelopmentList"
-import { WorkContentDialogProps } from "./Profile"
 import { WorksContentProps } from "./Works"
 
 export const Home = (props: { allData: Array<DocumentData> }) => {

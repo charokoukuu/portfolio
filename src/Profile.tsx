@@ -259,16 +259,16 @@ export const Profile = () => {
                                     <Grid container alignItems={"center"} justifyItems={"center"} spacing={1}>
                                         <Grid item xs={6}>
                                             <div className="japanese_B" style={{ fontSize: "2vw", textAlign: "left" as "left", marginLeft: "4vw" }}>
-                                                <a className="click" onClick={() => {
+                                                <div className="click" onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "Frontend",
                                                         content: "Webフレームワーク「React.js」「Vue.js」を使ったフロントエンド開発を行っています。",
                                                         image: "https://www.shareicon.net/data/2016/07/10/119874_apps_512x512.png",
                                                     });
-                                                }} style={{ cursor: "pointer" }}> Frontend</a>
+                                                }} style={{ cursor: "pointer" }}> Frontend</div>
                                                 <br />
-                                                <a className="click" onClick={() => {
+                                                <div className="click" onClick={() => {
                                                     setOpen(true);
                                                     setWork({
                                                         title: "Backend",
@@ -277,7 +277,7 @@ export const Profile = () => {
                                                     });
                                                 }} style={{ cursor: "pointer" }}>
                                                     Backend
-                                                </a>
+                                                </div>
                                                 <br />
                                                 <div className="click" onClick={() => {
                                                     setOpen(true);

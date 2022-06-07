@@ -1,7 +1,5 @@
-import { Button, Grid } from "@mui/material";
 import { collection, DocumentData, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Header } from "./component/Header";
 import { db } from "./Firebase";
 import { Home } from "./Home";
@@ -21,9 +19,6 @@ export const Works = () => {
     const [allData, setAllData] = useState<Array<DocumentData>>();
     const GetData = async () => {
         const querySnapshot = await getDocs(collection(db, "develop"));
-        // querySnapshot.forEach((doc: DocumentData) => {
-        //     setWorkData(doc.data());
-        // })
         setAllData(querySnapshot.docs.map((doc: DocumentData) => doc.data()));
 
     }

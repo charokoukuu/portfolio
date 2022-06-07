@@ -1,6 +1,5 @@
 import { TextField, Button, Grid, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material"
 import { useState } from "react";
-import { DetailDialog } from "./component/DetailDialog";
 import { Header } from "./component/Header"
 export const Contact = () => {
     const [open, setOpen] = useState(false);
