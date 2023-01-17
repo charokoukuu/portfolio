@@ -69,16 +69,16 @@ export const WorksDetail = () => {
                         {data?.link && <div>
                             <br />
                             <br />
-                            リンク: <a href={data?.link} target="_blank" rel="noreferrer" >{data?.link}</a>
+                            関連リンク: <a href={data?.link} target="_blank" rel="noreferrer" >{data?.link}</a>
                         </div>}
                         <br />
                         <br />
-                        使用技術: {data?.framework}
+                        技術スタック <div style={{ width: "70vw", margin: "auto", textAlign: "center" }}>  {data?.framework}</div>
                         <br />
-                        カテゴリ: {data?.category}
+                        カテゴリ<div style={{ width: "50vw", margin: "auto", textAlign: "center" }}>  {data?.category}</div>
                         <br />
                         <br />
-                        {data?.link && <div>  製作時期: {data?.timeStamp}</div>}
+                        {data?.link && <div>  製作時期<div style={{ width: "50vw", margin: "auto", textAlign: "center" }}>  {data?.timeStamp}</div></div>}
                     </div>
                     <div style={{
                         textAlign: "center" as "center",
